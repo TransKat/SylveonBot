@@ -27,7 +27,6 @@ class Fun(commands.Cog):
     async def say(self, ctx, *, arg):
         await ctx.message.delete()
         await ctx.send(arg)
-        print(f"{ctx.author} used say to send {arg} in {ctx.channel.id}")
 
     @commands.command(brief="Generates a random number from 0 to a number of your choice.")
     async def gennumber(self, ctx, arg):
