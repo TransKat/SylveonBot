@@ -5,7 +5,7 @@ import discord
 import os
 from discord.ext import commands
 
-version = "sylvebot 21.08.22 - my prefix is !"
+version = "sylvebot 21.08.23 - my prefix is !, s!, or s."
 
 # loads the token from token.txt
 
