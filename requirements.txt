@@ -1,0 +1,3 @@
+discord
+googlesearch-python
+praw
