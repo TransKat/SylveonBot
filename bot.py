@@ -3,14 +3,15 @@
 
 import discord
 import os
+import json
 from discord.ext import commands
 
-version = "sylvebot 21.08.23 - my prefix is !, s!, or s."
+version = "sylvebot 21.09.02 - my prefix is !, s!, or s."
 
 # loads the token from token.txt
 
-with open('./token.txt') as f:
-    TOKEN = f.read()
+#with open('./token.txt') as f:
+    #TOKEN = f.read()
 
 client = commands.Bot(command_prefix=["!", "s!", "s.", "s$"], case_insensitive=True)
 
@@ -133,4 +134,4 @@ async def get_resource(ctx, arg):
         await ctx.message.add_reaction("✅")
 
 
-client.run(TOKEN)
+client.run(json.load(open('config.json')).get('TOKEN'))
