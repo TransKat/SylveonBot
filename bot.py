@@ -1,4 +1,4 @@
-# Hallucinate - 21.05
+# Based on Hallucinate 21.05
 
 
 import discord
@@ -6,12 +6,15 @@ import os
 import json
 from discord.ext import commands
 
-version = "sylvebot 21.09.02 - my prefix is !, s!, or s."
+version = "sylvebot 21.09.04 - my prefix is !, s!, or s."
 
 # loads the token from token.txt
 
 #with open('./token.txt') as f:
     #TOKEN = f.read()
+
+# loads the token from config.json
+TOKEN = json.load(open('config.json')).get('TOKEN')
 
 client = commands.Bot(command_prefix=["!", "s!", "s.", "s$"], case_insensitive=True)
 
@@ -134,4 +137,4 @@ async def get_resource(ctx, arg):
         await ctx.message.add_reaction("✅")
 
 
-client.run(json.load(open('config.json')).get('TOKEN'))
+client.run(TOKEN)
