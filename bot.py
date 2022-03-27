@@ -6,7 +6,7 @@ import os
 import json
 from discord.ext import commands
 
-version = "sylvebot 21.09.04 - my prefix is !, s!, or s."
+version = "sylvebot 22.03.27 - my prefix is !, s!, or s."
 
 # loads the token from token.txt
 
