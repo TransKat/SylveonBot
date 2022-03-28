@@ -6,7 +6,7 @@ Install the packages listed in requirements.txt
 
 Place your bot token in config.json
 
-Run python bot.pyed 
+Run python bot.py 
 
 
 # Where are the Sylveon images sourced from?
