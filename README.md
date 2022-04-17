@@ -10,4 +10,4 @@ Run python bot.py
 
 
 # Where are the Sylveon images sourced from?
-The pictures are generally sourced from @SylveonXII on Twitter. The images themselves are fetched from my webserver.
+The pictures are generally sourced from @SylveonXIII on Twitter. The images themselves are fetched from my webserver.
