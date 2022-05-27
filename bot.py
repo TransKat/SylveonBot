@@ -4,9 +4,12 @@
 import discord
 import os
 import json
-from discord.ext import commands
+import random
+from discord.ext import tasks, commands
 
 version = "sylvebot 22.03.27 - my prefix is !, s!, or s."
+sylveCount=80
+channel_id = int(input("What channel (ID) should images be automatically sent to? "))
 
 # loads the token from token.txt
 
@@ -136,5 +139,15 @@ async def get_resource(ctx, arg):
         print(f"Successfully gathered and uploaded {arg}.")
         await ctx.message.add_reaction("✅")
 
-
+@tasks.loop(minutes=30.0)
+async def messenger():
+    channel = client.get_channel(channel_id)
+    pic = random.randint(1, sylveCount)
+    await channel.send(f"Sylveon #{pic}")
+    await channel.send(f'http://web.freshmandevs.pw/files/sylveon/{pic}.png')
+    
+@messenger.before_loop
+async def before():
+    await client.wait_until_ready()
+        
 client.run(TOKEN)
